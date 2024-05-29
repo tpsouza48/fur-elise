@@ -30,5 +30,15 @@ function mostrarSlides() {
 
 document.addEventListener("DOMContentLoaded", () => {
     criarFolhas();
+    
+    document.getElementById('container').style.display = 'none';
+
+    let bv = document.getElementById("bv")
+    bv.addEventListener('click', () => {
+        bv.style.display = 'none';
+        document.getElementById('container').style.display = 'block';
+        document.getElementById('audio').play();
+    })
+
     mostrarSlides();
 })

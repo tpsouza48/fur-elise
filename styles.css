@@ -1,4 +1,4 @@
-/* SOMENTE PARA ESTILIZAR! */
+/* INICIO ESTILIZAÇÃO PADRÃO */
 video {
     z-index: -2;
     position: fixed;
@@ -14,12 +14,42 @@ body {
     z-index: 1;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
+/* FIM ESTILIZAÇÃO PADRÃO */
+
+/* INICIO BOAS VINDAS */
+#bv {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 20;
+
+    background-color: #6d6d6d8f;
+    color: white;
+
+    width: 100%;
+    height: 100%;
+
+    padding: 40vh 0;
+    margin: auto;
+    text-align: center;
+    justify-content: center;
+}
+
+#bv h2 {
+    font-weight: lighter;
+}
+
+#bv p {
+    margin: 15px;
+}
+/* FIM BOAS VINDAS */
+
 
 #container {
     width: 80%;
-    height: 100vh;
+    height: 100%;
     margin: auto;
-    margin-top: 100px;
+    margin-top: 50px;
     margin-bottom: 50px;
 
     /* rgba(185, 174, 174, 0.651) */
@@ -30,6 +60,19 @@ body {
     align-items: center;
     text-align: center;
     padding: 20px;
+
+    animation: containerFade ease 1s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+@keyframes containerFade {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
 }
 
 #titulo {
@@ -57,32 +100,63 @@ body {
 }
 
 /* INICIO GALERIA */
-#galeria {
-    margin-top: 20px;
+@media only screen and (max-width: 600px) {
+    #galeria{
+        width: 100%;
+        margin-top: 20px;
 
-    align-content: center;
-    align-items: center;
-    text-align: center;
+        align-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    #galeria .slides {
+        width: 100%;
+        height: 300px;
+    
+        text-align: center;
+    }
+    
+    .galeria-img {
+        width: 100%;
+        height: inherit;
+    
+        border-radius: 20px;
+        border: #50505041 2px solid;
+        object-fit: cover;
+    
+        text-align: center;
+    }
 }
 
-#galeria .slides {
-    width: 300px;
-    height: 300px;
+@media only screen and (min-width: 601px) {
+    #galeria {
+        width: 30%;
+        margin-top: 20px;
+        margin: auto;
 
-    margin: auto;
-    text-align: center;
-}
+        align-content: center;
+        align-items: center;
+        text-align: center;
+    }
 
-.galeria-img {
-    width: 100%;
-    height: inherit;
+    #galeria .slides {
+        width: 100%;
+        height: 300px;
 
-    border-radius: 20px;
-    border: #50505041 2px solid;
-    object-fit: cover;
+        text-align: center;
+    }
 
-    margin: auto;
-    text-align: center;
+    .galeria-img {
+        width: 100%;
+        height: inherit;
+
+        border-radius: 20px;
+        border: #50505041 2px solid;
+        object-fit: cover;
+
+        text-align: center;
+    }
 }
 
 .fade {
