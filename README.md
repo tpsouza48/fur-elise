@@ -1,2 +1,2 @@
 # fur-elise
-Homenagem de dia dos namorados para uma garota especial.
+Valentinstag-Hommage an ein besonderes Mädchen.
